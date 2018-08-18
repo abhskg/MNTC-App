@@ -28,7 +28,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".Test_activity"></activity>
+        <activity android:name=".Event_independent_activity"></activity>
     </application>
 
 </manifest>
