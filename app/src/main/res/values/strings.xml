@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MNTC-App</string>
     <string name="title_activity_login">Sign in</string>
-    <string name="about_mntc">Mathematics,an abstract science of numbers, quantity and space, has held its place as prerequisite to flourish in today's world. At Maths N Tech Club, we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle students' interest in maths and the thirst of knowledge.</string>
+    <string name="about_mntc">Mathematics,an abstract science of numbers, quantity and space, has held its place as prerequisite to flourish in today world. At Maths N Tech Club, we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle student's interest in maths and the thirst of knowledge.</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

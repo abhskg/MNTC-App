@@ -6,15 +6,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static String DATABASE_NAME="Events.db";
-    public static String TABLE_NAME="Events_mstr";
-    public static String COL1="name";
-    public static String COL2="date";
-    public static String COL3="venue";
-    public static String COL4="time";
-    public static String COL5="description";
-    public static String COL6="poster_id";
-    public static String COL7="PK";
+    public static final String DATABASE_NAME="Events.db";
+    public static final String TABLE_NAME="Events_mstr";
+    public static final String COL1="name";
+    public static final String COL2="date";
+    public static final String COL3="venue";
+    public static final String COL4="time";
+    public static final String COL5="description";
+    public static final String COL6="poster_id";
+    public static final String COL7="PK";
+    public static final int DATABASE_VERSION=1;
 
 
     public DatabaseHelper(Context context,String name, SQLiteDatabase.CursorFactory factory, int version)

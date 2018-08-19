@@ -1,6 +1,7 @@
 package com.example.oem.mntc_app;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,20 +11,18 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DrawerLayout mDrawerLayout;
-    int events=0;
-    DatabaseHelper db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        db = new DatabaseHelper(this,"mntc",null,1);
-
+        // get the id of the CardView and attach an onClickListener to it
+        findViewById(R.id.one).setOnClickListener(this);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
@@ -33,15 +32,8 @@ public class MainActivity extends AppCompatActivity {
         actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3F51B5")));
         actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher_foreground);
 
-        if (events==0)
-        {
-            TextView no_events = (TextView) findViewById(R.id.no_events);
-            no_events.setText("Sorry, No Events to Display");
-        }
-        else
-        {
-                
-        }
+
+
         mDrawerLayout.addDrawerListener(
                 new DrawerLayout.DrawerListener() {
                     @Override
@@ -79,4 +71,18 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
 
+    @Override
+    public void onClick(View view) {
+        if(view.getId()!=0)
+        {
+            //Do something Like starting an activity
+            Intent intent = new Intent(MainActivity.this, Event_independent_activity.class);
+            intent.putExtra("VENUE","R.string."+view.getId()+"_venue");
+            intent.putExtra("DATE","R.string."+view.getId()+"_date");
+            intent.putExtra("IMG","R.string."+view.getId()+"_img");
+            intent.putExtra("TIME","R.string."+view.getId()+"_time");
+            intent.putExtra("DESCRIPTION","R.string."+view.getId()+"_description");
+            startActivity(intent);
+        }
+    }
 }
