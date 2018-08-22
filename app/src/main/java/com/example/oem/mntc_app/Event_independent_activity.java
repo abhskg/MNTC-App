@@ -21,10 +21,6 @@ public class Event_independent_activity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        ActionBar bar = getSupportActionBar();
-        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3F51B5")));
-        bar.setHomeAsUpIndicator(R.drawable.ic_launcher_foreground);
-        bar.setDisplayHomeAsUpEnabled(true);
 
         TextView description = (TextView) findViewById(R.id.event_text);
         TextView date = (TextView) findViewById(R.id.event_date);
