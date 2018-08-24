@@ -27,7 +27,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.1'
 //    Added dependency for horizontal recycler view in main activity
     implementation 'com.android.support:recyclerview-v7:27.1.1'
-    // Added dependency for the Card View
+//    Added dependency for the Card View
     implementation 'com.android.support:cardview-v7:27.1.1'
 
     implementation 'com.android.support:appcompat-v7:27.1.1'
