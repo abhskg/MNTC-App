@@ -5,16 +5,28 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.example.oem.mntc_app.Recycler.MyAdapter;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DrawerLayout mDrawerLayout;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
 
     @Override
@@ -22,10 +34,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // get the id of the CardView and attach an onClickListener to it
-        findViewById(R.id.one).setOnClickListener(this);
+        //findViewById(R.id.main_activity_event_scroller).setOnClickListener(this);
 
+        // Drawer layout declaration
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
+        // Recycler View Declarartion
+        mRecyclerView = (RecyclerView) findViewById(R.id.main_activity_event_scroller);
+        mRecyclerView.setHasFixedSize(true);
+
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        String[] myDataset;
+        //mAdapter = new MyAdapter(myDataset);
+       // mRecyclerView.setAdapter(mAdapter);
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
