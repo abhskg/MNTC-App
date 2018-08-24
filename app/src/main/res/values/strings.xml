@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MNTC-App</string>
     <string name="title_activity_login">Sign in</string>
-    <string name="about_mntc">Mathematics,an abstract science of numbers, quantity and space, has held its place as prerequisite to flourish in today world. At Maths N Tech Club, we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle student's interest in maths and the thirst of knowledge.</string>
+    <string name="about_mntc">Mathematics,an abstract science of numbers, quantity and space, has held its place as prerequisite to flourish in today world. At Maths N Tech Club, we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle student interest in maths and the thirst of knowledge.</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -15,4 +15,17 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- Strings required for Navigation Bar -->
+    <string name="nav_aavishkaar">Aavishkaar</string>
+    <string name="nav_live_events">Live Events</string>
+    <string name="nav_about_us">About Us</string>
+
+    <!-- Strings related to independent event views -->
+    <string name="one_img">one</string>
+    <string name="one_venue">DM SEN</string>
+    <string name="one_date">22 Aug</string>
+    <string name="one_time">6:30 PM</string>
+    <string name="one_description">jhdfvgakueryfvhjaervfhgaegruyfbwerfverwuf</string>
+
 </resources>

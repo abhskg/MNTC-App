@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_aavishkaar"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/nav_aavishkaar"/>
+    <item
+        android:id="@+id/navigation_about_us"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/nav_about_us"/>
+    <item
+        android:id="@+id/navigation_live_events"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/nav_live_events"/>
+</menu>
