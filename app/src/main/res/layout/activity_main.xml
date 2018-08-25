@@ -106,7 +106,7 @@
                             android:layout_weight="1" />
 
                         <ImageView
-                            android:id="@+id/imageView2 _upcoming_event"
+                            android:id="@+id/imageView2_upcoming_event"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -168,7 +168,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="120dp¨
+                            android:layout_width="120dp"
                             android:layout_height="match_parent"
                             android:src="@drawable/ic_launcher_foreground" />
 
