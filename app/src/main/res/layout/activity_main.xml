@@ -27,37 +27,12 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <ImageButton
-                                android:id="@+id/one"
-                                android:layout_width="270dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_launcher_foreground"
-                                />
-                            <ImageButton
-                                android:id="@+id/two"
-                                android:layout_width="270dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_launcher_foreground"
-                                />
-                            <ImageButton
-                                android:id="@+id/three"
-                                android:layout_width="270dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_launcher_foreground"
-                                />
-                            <ImageButton
-                                android:id="@+id/four"
-                                android:layout_width="270dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_launcher_foreground"
-                                />
-                            <ImageButton
-                                android:id="@+id/five"
-                                android:layout_width="270dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_launcher_foreground"
-                                />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <ListView
+                                android:id="@android:id/list"
+                                android:layout_width="250dp"
+                                android:layout_height="match_parent"/>
                         </LinearLayout>
                        </HorizontalScrollView>
 

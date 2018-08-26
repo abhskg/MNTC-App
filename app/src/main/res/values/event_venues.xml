@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="event_individual_venues">
+    <item>DM SEN Auditorium</item>
+    <item>AUDI 1</item>
+    <item>AUDI 2</item>
+    <item>LG 21</item>
+    <item>LG 13</item>
+    </string-array>
+</resources>
