@@ -39,8 +39,8 @@ public class Event_independent_activity extends AppCompatActivity {
         venue.setText(getvenue);
         time.setText(gettime);
 
-        int img_id = getResources().getIdentifier(getimg,"drawable",getPackageName());
-        Drawable image = getResources().getDrawable(img_id);
+        Drawable image = getResources().getDrawable(Integer.valueOf(getimg));
+
         img.setImageDrawable(image);
 
         date.setText(getdate);

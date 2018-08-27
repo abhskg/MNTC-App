@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -166,41 +167,32 @@ public class MainActivity extends ListActivity {
             events_venue[i] = events_venue[changed[i]];
             events_venue[changed[i]]=ans;
         }
-        int[] images = new int[size];
+        final int[] images = new int[size];
         for(int i=0;i<size;i++){
-//            events_images[i] = Integer.toString(getResources().getIdentifier(events_images[i],"drawable",getPackageName()));
             images[i] = getResources().getIdentifier(events_images[i],"drawable",getPackageName());
         }
+        final ListView list = (ListView) findViewById(android.R.id.list);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,Event_independent_activity.class);
+                intent.putExtra("VENUE",events_venue[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+                intent.putExtra("DATE",events_dates[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+                intent.putExtra("IMG",images[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+                intent.putExtra("TIME",events_time[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+                intent.putExtra("DESCRIPTION",events_description[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+                startActivity(intent);
+            }
+        });
 
-
-        ListView list = (ListView) findViewById(android.R.id.list);
         MyAdapter adapter = new MyAdapter(this,images);
         list.setAdapter(adapter);
-
-        // get the id of the CardView and attach an onClickListener to it
-//        findViewById(R.id.one).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i(TAG,String.valueOf(R.string.one_time));
-//                Intent intent = new Intent(MainActivity.this, Event_independent_activity.class);
-//                intent.putExtra("VENUE", getString(R.string.one_venue));
-//                intent.putExtra("DATE", getString(R.string.one_date));
-//                intent.putExtra("IMG", getString(R.string.one_img));
-//                intent.putExtra("TIME", getString(R.string.one_time));
-//                intent.putExtra("DESCRIPTION", getString(R.string.one_description));
-//                startActivity(intent);
-//            }
-//        });
-//        findViewById(R.id.two).setOnClickListener(this);
-//        findViewById(R.id.three).setOnClickListener(this);
-//        findViewById(R.id.four).setOnClickListener(this);
-//        findViewById(R.id.five).setOnClickListener(this);
 
     }
 
     class MyAdapter extends ArrayAdapter<String>{
         Context context;
-        int[] imgs;
+        public int[] imgs;
         MyAdapter(Context c,int[] imgs){
             super(c,R.layout.list_single,R.id.event_icon,events_images);
             this.context=c;
@@ -211,8 +203,8 @@ public class MainActivity extends ListActivity {
         public View getView(int position, View convertView, ViewGroup parent){
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = layoutInflater.inflate(R.layout.list_single,parent,false);
-            ImageView images = (ImageView) findViewById(R.id.event_icon);
-//            images.setImageResource(imgs(position));
+            ImageView image =row.findViewById(R.id.event_icon);
+            image.setImageResource(imgs[position]);
             return row;
         }
     }
