@@ -167,9 +167,10 @@ public class MainActivity extends ListActivity {
             events_venue[i] = events_venue[changed[i]];
             events_venue[changed[i]]=ans;
         }
-        final int[] images = new int[size];
+        final String[] images = new String[size];
         for(int i=0;i<size;i++){
-            images[i] = getResources().getIdentifier(events_images[i],"drawable",getPackageName());
+            images[i] = Integer.toString(getResources().getIdentifier(events_images[i],"drawable",getPackageName()));
+            //The above images is a string
         }
         final ListView list = (ListView) findViewById(android.R.id.list);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -192,8 +193,8 @@ public class MainActivity extends ListActivity {
 
     class MyAdapter extends ArrayAdapter<String>{
         Context context;
-        public int[] imgs;
-        MyAdapter(Context c,int[] imgs){
+        public String[] imgs;
+        MyAdapter(Context c,String[] imgs){
             super(c,R.layout.list_single,R.id.event_icon,events_images);
             this.context=c;
             this.imgs = imgs;
@@ -204,7 +205,7 @@ public class MainActivity extends ListActivity {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = layoutInflater.inflate(R.layout.list_single,parent,false);
             ImageView image =row.findViewById(R.id.event_icon);
-            image.setImageResource(imgs[position]);
+            image.setImageResource(Integer.valueOf(imgs[position]));
             return row;
         }
     }
