@@ -18,23 +18,28 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="sensor">
-
-        </activity>
+            android:screenOrientation="sensor" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="sensor"
-            android:label="@string/title_activity_login" >
+            android:label="@string/title_activity_login"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name=".Event_independent_activity"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Test_view"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".SignupActivity"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Event_independent_activity"
-            android:screenOrientation="sensor"/>
-        <activity android:name=".Test_view"
-            android:screenOrientation="sensor"/>
+        <activity android:name=".ResetPasswordActivity"/>
     </application>
 
 </manifest>
