@@ -30,7 +30,7 @@ public class SplashLoginActivity extends AppCompatActivity {
         splash_rel_lay1 = (RelativeLayout) findViewById(R.id.splash_rel_lay1);
         splash_rel_lay2 = (RelativeLayout) findViewById(R.id.splash_rel_lay2);
 
-        handler.postDelayed(runnable, delayMillis : 1500 );  // 1.5 second delay
+        handler.postDelayed(runnable,1500 ); // 1.5 second delay
 
     }
 
