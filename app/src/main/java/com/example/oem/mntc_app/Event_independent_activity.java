@@ -8,11 +8,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Event_independent_activity extends AppCompatActivity {
 
+    private static final String TAG = "Event_independent_activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +22,7 @@ public class Event_independent_activity extends AppCompatActivity {
         setContentView(R.layout.activity_event_independent_activity);
 
         Intent intent = getIntent();
-
-        ActionBar bar = getSupportActionBar();
-        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3F51B5")));
-        bar.setHomeAsUpIndicator(R.drawable.ic_launcher_foreground);
-        bar.setDisplayHomeAsUpEnabled(true);
+        Bundle data = intent.getExtras();
 
         TextView description = (TextView) findViewById(R.id.event_text);
         TextView date = (TextView) findViewById(R.id.event_date);
@@ -32,17 +30,19 @@ public class Event_independent_activity extends AppCompatActivity {
         TextView time = (TextView) findViewById(R.id.event_time);
         TextView venue = (TextView) findViewById(R.id.event_venue);
 
-        String getdate = (String) intent.getExtras().getString("DATE");
-        String gettime = (String) intent.getExtras().getString("TIME");
-        String getvenue = (String) intent.getExtras().getString("VENUE");
-        String getdescription = (String) intent.getExtras().getString("DESCRIPTION");
-        String getimg = (String) intent.getExtras().getString("IMG");
+        String getdate = (String) data.getString("DATE");
+        String gettime = (String) data.getString("TIME");
+        String getvenue = (String) data.getString("VENUE");
+        String getdescription = (String) data.getString("DESCRIPTION");
+        String getimg = (String) data.getString("IMG");
 
         venue.setText(getvenue);
         time.setText(gettime);
 
-        int img_id = getResources().getIdentifier(getimg,"drawable",getPackageName());
-        Drawable image = getResources().getDrawable(img_id);
+        Drawable image = getResources().getDrawable(Integer.valueOf(getimg));
+        Log.i(TAG, "onCreate:"+image);
+        /*Debugging on click listener error*/
+        //This activity is not being called
         img.setImageDrawable(image);
 
         date.setText(getdate);

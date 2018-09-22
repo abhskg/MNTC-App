@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/tools">
+    <string-array name="event_individual_images">
+        <item
+            android:drawable="@drawable/one">one</item>
+        <item
+            android:drawable="@drawable/two">two</item>
+        <item
+            android:drawable="@drawable/three">three</item>
+        <item
+            android:drawable="@drawable/four">four</item>
+        <item
+            android:drawable="@drawable/five">five</item>
+    </string-array>
+</resources>

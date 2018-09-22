@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="event_individual_dates">
+    <item>26-08-2018</item>
+    <item>02-09-2018</item>
+    <item>25-08-2018</item>
+    <item>27-07-2018</item>
+    <item>05-01-2017</item>
+</string-array>
+</resources>

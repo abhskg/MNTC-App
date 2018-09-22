@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "382668217562",
-    "firebase_url": "https://mntc-app.firebaseio.com",
-    "project_id": "mntc-app",
-    "storage_bucket": "mntc-app.appspot.com"
+    "project_number": "485310331686",
+    "firebase_url": "https://mntc-88e3a.firebaseio.com",
+    "project_id": "mntc-88e3a",
+    "storage_bucket": "mntc-88e3a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:382668217562:android:16be2bdf0278ce02",
+        "mobilesdk_app_id": "1:485310331686:android:16be2bdf0278ce02",
         "android_client_info": {
           "package_name": "com.example.oem.mntc_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "382668217562-rc8e1t3q2a0ccoag5scotdccn2aakrbb.apps.googleusercontent.com",
+          "client_id": "485310331686-c3cv56e7n8dak3iisa7u74r8v3ggouej.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oem.mntc_app",
+            "certificate_hash": "1c623fecc07a071d2bf74199468bab4e1adc8740"
+          }
+        },
+        {
+          "client_id": "485310331686-mi4habv4m0soe41qq97lnh3o8ai6s79s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyApvhOp3vLJr2GbOavPA8leTI9j4lmRmho"
+          "current_key": "AIzaSyBPsEaiLiS9_IJ1V6UpxNtwHvvQtZYKsfM"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485310331686-mi4habv4m0soe41qq97lnh3o8ai6s79s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
