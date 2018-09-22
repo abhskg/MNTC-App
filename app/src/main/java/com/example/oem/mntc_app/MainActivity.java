@@ -15,7 +15,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -49,7 +48,6 @@ public class MainActivity extends ListActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Calendar calendar = Calendar.getInstance();
@@ -65,6 +63,8 @@ public class MainActivity extends ListActivity {
         events_images = getResources().getStringArray(R.array.event_individual_images);
         events_description = getResources().getStringArray(R.array.event_individual_description);
         events_venue = getResources().getStringArray(R.array.event_individual_venues);
+
+
 
 
         /*Variables required for sorting data for list view Android*/
