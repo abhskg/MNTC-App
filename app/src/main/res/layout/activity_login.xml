@@ -87,7 +87,12 @@
             android:textColor="@color/white"
             android:textSize="15dp" />
     </LinearLayout>
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/googlesigninbtn">
 
+    </com.google.android.gms.common.SignInButton>
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -95,6 +100,11 @@
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="20dp"
         android:visibility="gone" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_layout"
+        android:visibility="gone"/>
 </android.support.design.widget.CoordinatorLayout>
 
 
