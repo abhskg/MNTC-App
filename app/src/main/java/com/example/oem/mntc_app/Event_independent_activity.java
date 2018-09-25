@@ -40,7 +40,6 @@ public class Event_independent_activity extends AppCompatActivity {
         time.setText(gettime);
 
         Drawable image = getResources().getDrawable(Integer.valueOf(getimg));
-        Log.i(TAG, "onCreate:"+image);
         /*Debugging on click listener error*/
         //This activity is not being called
         img.setImageDrawable(image);
