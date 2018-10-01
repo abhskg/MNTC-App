@@ -40,7 +40,10 @@
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".Aavishkar"
+            android:label="@string/title_activity_aavishkar"></activity>
     </application>
 
 </manifest>

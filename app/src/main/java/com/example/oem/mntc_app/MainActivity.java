@@ -194,42 +194,42 @@ public class MainActivity extends ListActivity {
 //        }
 //        Log.i(TAG, "Debug: Images: "+images[0]);
 //        Log.i(TAG, "Debug: Venue: "+events_venue[0]);
-        final ListView list = (ListView) findViewById(android.R.id.list);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this,Event_independent_activity.class);
-                intent.putExtra("VENUE",events_venue[Integer.valueOf(list.getItemAtPosition(position).toString())]);
-                intent.putExtra("DATE",events_dates[Integer.valueOf(list.getItemAtPosition(position).toString())]);
-                intent.putExtra("IMG",images[Integer.valueOf(list.getItemAtPosition(position).toString())]);
-                intent.putExtra("TIME",events_time[Integer.valueOf(list.getItemAtPosition(position).toString())]);
-                intent.putExtra("DESCRIPTION",events_description[Integer.valueOf(list.getItemAtPosition(position).toString())]);
-                startActivity(intent);
-            }
-        });
-
-        MyAdapter adapter = new MyAdapter(this,images);
-        list.setAdapter(adapter);
-
-    }
-
-    class MyAdapter extends ArrayAdapter<String>{
-        Context context;
-        public String[] imgs;
-        MyAdapter(Context c,String[] imgs){
-            super(c,R.layout.list_single,R.id.event_icon,events_images);
-            this.context=c;
-            this.imgs = imgs;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent){
-            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row = layoutInflater.inflate(R.layout.list_single,parent,false);
-            ImageView image =row.findViewById(R.id.event_icon);
-            image.setImageResource(Integer.valueOf(imgs[position]));
-            return row;
-        }
+//        final ListView list = (ListView) findViewById(android.R.id.list);
+//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(MainActivity.this,Event_independent_activity.class);
+//                intent.putExtra("VENUE",events_venue[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+//                intent.putExtra("DATE",events_dates[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+//                intent.putExtra("IMG",images[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+//                intent.putExtra("TIME",events_time[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+//                intent.putExtra("DESCRIPTION",events_description[Integer.valueOf(list.getItemAtPosition(position).toString())]);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        MyAdapter adapter = new MyAdapter(this,images);
+//        list.setAdapter(adapter);
+//
+//    }
+//
+//    class MyAdapter extends ArrayAdapter<String>{
+//        Context context;
+//        public String[] imgs;
+//        MyAdapter(Context c,String[] imgs){
+//            super(c,R.layout.list_single,R.id.event_icon,events_images);
+//            this.context=c;
+//            this.imgs = imgs;
+//        }
+//
+//        @Override
+//        public View getView(int position, View convertView, ViewGroup parent){
+//            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//            View row = layoutInflater.inflate(R.layout.list_single,parent,false);
+//            ImageView image =row.findViewById(R.id.event_icon);
+//            image.setImageResource(Integer.valueOf(imgs[position]));
+//            return row;
+//        }
     }
 
     /*Functions for activating intents on click on bottom navigation bar*/

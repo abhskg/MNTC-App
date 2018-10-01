@@ -21,6 +21,7 @@ android:orientation="vertical">
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:src="@drawable/profileimg"
+            android:id="@+id/profile_image"
             android:elevation="45dp"
             />
         <TextView
@@ -28,6 +29,7 @@ android:orientation="vertical">
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/profile_name"
             android:text="Shankar Ray"
             android:textColor="#fff"
             android:textStyle="bold"
@@ -38,6 +40,7 @@ android:orientation="vertical">
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="290dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -58,6 +61,7 @@ android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/profile_score"
                     android:text="125"
                     android:textStyle="bold"
                     android:textSize="20sp"
@@ -80,6 +84,7 @@ android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/profile_participation"
                     android:text="120"
                     android:textStyle="bold"
                     android:textSize="20sp"
@@ -102,6 +107,7 @@ android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/profile_attempted"
                     android:text="360"
                     android:textStyle="bold"
                     android:textSize="20sp"
@@ -131,6 +137,7 @@ android:orientation="vertical">
             android:src="@drawable/ic_email_black_24dp"/>
         <TextView
             android:textStyle="bold"
+            android:id="@+id/profile_email"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -149,32 +156,33 @@ android:orientation="vertical">
             android:src="@drawable/ic_phone_android_black_24dp"/>
         <TextView
             android:textStyle="bold"
-
+            android:id="@+id/profile_mobile"
+            android:text="9100326365"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:text="987654321"/>
+            android:paddingLeft="20dp"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ic_settings_black_24dp"/>
-        <TextView
-            android:textStyle="bold"
 
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="25dp"
-            android:text="Settings"/>
-    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<ImageView-->
+            <!--android:layout_width="36dp"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:src="@drawable/ic_settings_black_24dp"/>-->
+        <!--<TextView-->
+            <!--android:textStyle="bold"-->
+
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="25dp"-->
+            <!--android:text="Settings"/>-->
+    <!--</LinearLayout>-->
 </LinearLayout>
 
 <Button
@@ -184,6 +192,7 @@ android:orientation="vertical">
     android:layout_gravity="center_horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:onClick="logout"
     android:text="LOG OUT"/>
 
 </LinearLayout>
