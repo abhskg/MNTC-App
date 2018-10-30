@@ -17,17 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildToolsVersion '28.0.2'
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //    Added firebase support
     // All Dependencies can't meet google auth 16.0.3
-    implementation 'com.google.firebase:firebase-core:16.0.3'
-    implementation 'com.google.firebase:firebase-auth:16.0.3'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-auth:16.0.4'
     //    Added firebase db support
-    implementation 'com.google.firebase:firebase-database:16.0.2'
+    implementation 'com.google.firebase:firebase-database:16.0.3'
 
     //Facebook Auth
 //    implementation 'com.facebook.android:facebook-login:4.36.1'
@@ -41,8 +41,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.google.android.gms:play-services-ads:15.0.1'
-    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+//    implementation 'com.google.android.gms:play-services-ads:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
 
 
 }
