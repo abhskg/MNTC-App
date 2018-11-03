@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="event_individual_time">
-    <item>8 AM</item>
-    <item>12 PM</item>
-    <item>6 PM</item>
-    <item>4 PM</item>
-    <item>10 AM</item>
+    <item>08:00</item>
+    <item>12:00</item>
+    <item>06:00</item>
+    <item>04:00</item>
+    <item>10:00</item>
     </string-array>
 </resources>
