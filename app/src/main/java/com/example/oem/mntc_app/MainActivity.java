@@ -31,7 +31,6 @@ public class MainActivity extends ListActivity {
     String[] events_images;
     String[] events_descriptions;
     String[] events_venues;
-    int limit;
 
 
 
@@ -53,61 +52,66 @@ public class MainActivity extends ListActivity {
         final String[] events_venues_duplicate = getResources().getStringArray(R.array.event_individual_venues);
         int size = events_dates.length;
         events all[] = new events[size];
-        for(int i=0;i<size;i++)
-        {
-            all[i]= new events();
+        for (int i = 0; i < size; i++) {
+            all[i] = new events();
         }
         long duplicate[] = new long[size];
         long sorted[] = new long[size];
         long differences[] = new long[size];
-        for(int i=0;i<size;i++)
-        {
+        for (int i = 0; i < size; i++) {
             all[i].setEvents_date(events_dates[i]);
             all[i].setEvents_time(events_times[i]);
             all[i].setEvents_image(events_images[i]);
             all[i].setEvents_description(events_descriptions[i]);
             all[i].setEvents_venue(events_venues[i]);
-            sorted[i]=0;
+            sorted[i] = 0;
         }
 
         Date today = new Date();
         Date now = new Date();
+
+        /*Debugging the correct sequence of dates and time taken for sorting*/
+//        Log.i(TAG, "Date Check: " + all[0].getEvents_date().substring(0, 2));
+//        Log.i(TAG, "Date Check: " + all[0].getEvents_date().substring(3, 5));
+//        Log.i(TAG, "Date Check: " + all[0].getEvents_date().substring(6,10));
+//        Log.i(TAG, "Date Check: " + all[0].getEvents_time().substring(0, 2));
+//        Log.i(TAG, "Date Check: " + all[0].getEvents_time().substring(3, 5));
+//        Log.i(TAG, "Date Check: " + all[0].getEvents_time().substring(6, 8));
+//        Log.i(TAG, "Date Check NOW: " + today);
+
         for(int i=0;i<size;i++)
         {
             @Deprecated
-            Date date = new Date(Integer.valueOf(all[i].getEvents_date().substring(6,9)),Integer.valueOf(all[i].getEvents_date().substring(3,4)),Integer.valueOf(all[i].getEvents_date().substring(0,1)),Integer.valueOf(all[i].getEvents_date().substring(6,9)),Integer.valueOf(all[i].getEvents_time().substring(0,1)),Integer.valueOf(all[i].getEvents_date().substring(3,4)));
+            Date date = new Date(Integer.valueOf(all[i].getEvents_date().substring(0,2)),Integer.valueOf(all[i].getEvents_date().substring(3,5)),Integer.valueOf(all[i].getEvents_date().substring(6,10)),Integer.valueOf(all[i].getEvents_time().substring(0,2)),Integer.valueOf(all[i].getEvents_time().substring(3,5)),Integer.valueOf(all[i].getEvents_time().substring(6,8)));
             long diff = today.getTime()-date.getTime();
             differences[i]=diff;
             duplicate[i]=diff;
         }
         Arrays.sort(differences);
-
+        int limit_custom=0;
         for(int i=0;i<size;i++)
         {
             if (differences[i]>0)
             {
-                limit=i;
+                limit_custom=i;
                 break;
             }
         }
-        limit--;
         int count=0;
-        for(int i=limit;i>0;i--)
+        for(int i=limit_custom;i>0;i--)
         {
             //Differences in order of greatest to least if <0 for upcoming events
             sorted[count]=differences[i];
             count++;
         }
-        for (int i=limit;i<size;i++)
+        for (int i=limit_custom;i<size;i++)
         {
-            Log.i(TAG,"testing1: "+Integer.toString(count));
-            //Differences in the order of least to greatest if >0 for recently completed events
-            //Error in line 97
-//            sorted[count]=differences[i];
+            sorted[count]=differences[i];
             count++;
         }
         //Now changing the differences array into how each object shall be accesed
         //Events do not overlap now as they will be conducted during different time in a day
+        //Events image data should contain the id of the resource
         for (int i=0;i<size;i++)
         {
             for(int j=i;j<size;j++)
@@ -117,11 +121,13 @@ public class MainActivity extends ListActivity {
                     events_dates_duplicate[i] = events_dates[j];
                     events_descriptions_duplicate[i] = events_descriptions[j];
                     events_images_duplicate[i] = events_images[j];
+                    events_images_duplicate[i]= String.valueOf(this.getResources().getIdentifier(events_images_duplicate[i],"drawable",this.getPackageName()));
                     events_venues_duplicate[i] = events_venues[j];
                     events_times_duplicate[i] = events_times[j];
                 }
             }
         }
+        Log.i(TAG,"Image Data: "+events_images_duplicate[0]);
 
         final ListView list = (ListView) findViewById(android.R.id.list);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -142,7 +148,7 @@ public class MainActivity extends ListActivity {
 
     }
 
-    class MyAdapter extends ArrayAdapter<String> {
+    class MyAdapter extends ArrayAdapter<String>{
         Context context;
         public String[] imgs;
         MyAdapter(Context c, String[] imgs){
@@ -156,7 +162,7 @@ public class MainActivity extends ListActivity {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = layoutInflater.inflate(R.layout.list_single,parent,false);
             ImageView image =row.findViewById(R.id.event_icon);
-//            image.setImageResource(Integer.valueOf(imgs[position]));
+            image.setImageResource(Integer.valueOf(imgs[position]));
             return row;
         }
     }
@@ -164,11 +170,11 @@ public class MainActivity extends ListActivity {
     /*Functions for activating intents on click on bottom navigation bar*/
     /*
 Write the on click listener in xml code of menu and remove comments for this*/
-//public void online_events()
-//{
-//Intent online = new Intent(this,Online_event.class);
-//startActivity(online);
-//}
+public void online_events()
+{
+Intent online = new Intent(this,Test_view.class);
+startActivity(online);
+}
 //
 //public void about_us()
 //{

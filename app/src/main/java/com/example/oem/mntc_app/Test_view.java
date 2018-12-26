@@ -12,8 +12,8 @@ public class Test_view extends AppCompatActivity {
         setContentView(R.layout.activity_test_view);
         webview = (WebView) findViewById(R.id.test_webview);
         webview.getSettings().setJavaScriptEnabled(true);
-        //Only https enabled sites can be used in webview
-        webview.loadUrl("https://knockknock.in.net");
+        /*Enter your url for the test here*/
+        webview.loadUrl("");
         webview.setHorizontalScrollBarEnabled(false);
         webview.setVerticalScrollBarEnabled(true);
     }
