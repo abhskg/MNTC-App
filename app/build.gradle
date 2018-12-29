@@ -31,6 +31,8 @@ dependencies {
     // Added dependencies for glide framework(Better image handling)
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //plugin for SVG Graphics Format for icons
+    implementation 'com.android.support:appcompat-v7:23.2.0'
 
 
     implementation 'com.android.support:appcompat-v7:28.0.0'

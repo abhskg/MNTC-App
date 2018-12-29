@@ -17,23 +17,27 @@
 
 
         <ImageView
+            android:id="@+id/login_form_club_logo"
             android:layout_width="@dimen/logo_w_h"
             android:layout_height="@dimen/logo_w_h"
+            android:layout_margin="30dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/ic_launcher_background" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="@string/hint_email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" />
         </android.support.design.widget.TextInputLayout>
@@ -49,6 +53,11 @@
                 android:layout_marginBottom="10dp"
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
+                android:imeActionId="6"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:maxLines="1"
+                android:singleLine="true"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" />
         </android.support.design.widget.TextInputLayout>
@@ -58,17 +67,32 @@
         <Button
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
+            android:background="@drawable/buttonstylegradient"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
+            android:layout_marginBottom="5dp"
             android:text="@string/btn_login"
             android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"/>
+
+
+        <com.google.android.gms.common.SignInButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:le
+            android:id="@+id/googlesigninbtn">
+
+        </com.google.android.gms.common.SignInButton>
 
         <Button
             android:id="@+id/btn_reset_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="5dp"
             android:background="@null"
             android:text="@string/btn_forgot_password"
             android:textAllCaps="false"
@@ -80,19 +104,15 @@
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginBottom="5dp"
             android:background="@null"
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15dp" />
     </LinearLayout>
-    <com.google.android.gms.common.SignInButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/googlesigninbtn">
 
-    </com.google.android.gms.common.SignInButton>
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -107,6 +127,8 @@
         android:visibility="gone"/>
 </android.support.design.widget.CoordinatorLayout>
 
+<!---->
+<!---->
 
 
     <!--<?xml version="1.0" encoding="utf-8"?>-->

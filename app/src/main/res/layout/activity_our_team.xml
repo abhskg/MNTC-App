@@ -23,22 +23,22 @@
                     app:cardCornerRadius="3dp">
 
                     <!--Displays the event posters -->
-                    <HorizontalScrollView
+                    <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-                            <ListView
-                                android:focusable="true"
-                                android:id="@android:id/list"
-                                android:layout_width="250dp"
-                                android:layout_height="match_parent"/>
-                        </LinearLayout>
-                       </HorizontalScrollView>
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@mipmap/ic_launcher"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Details of the team members "/>
+
+
+                    </ScrollView>
 
                     <!--Video view  in jayant's branch to display the video player -->
 

@@ -11,6 +11,10 @@
 
     <color name="gradientStartSplash">#faf7f8</color>
     <color name="gradientEndSplash">#FF4081</color>
+<!--Button colors-->
+    <color name="startbutton">#800000</color>
+    <color name="endbutton">#953000</color>
+
 
     <color name="bgBottomNavigation">#121111</color>
 
