@@ -22,7 +22,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:screenOrientation="sensor"/>
+            android:screenOrientation="sensor" />
         <activity
             android:name=".Event_independent_activity"
             android:screenOrientation="sensor" />
@@ -32,14 +32,16 @@
         <activity
             android:name=".SignupActivity"
             android:label="@string/title_activity_signup"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResetPasswordActivity"/>
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".Aavishkar" />
+        <activity android:name=".OurTeam"></activity>
     </application>
 
 </manifest>

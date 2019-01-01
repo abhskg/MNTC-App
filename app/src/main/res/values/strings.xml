@@ -3,6 +3,9 @@
     <string name="title_activity_login">Sign in</string>
     <string name="about_mntc">Mathematics,an abstract science of numbers, quantity and space, has held its place as prerequisite to flourish in today world. At Maths N Tech Club, we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle student interest in maths and the thirst of knowledge.</string>
 
+    <!--Strings for our team page -->
+    <string name="our_team">OUR TEAM</string>
+
     <!-- Strings required for Navigation Bar -->
     <string name="nav_aavishkaar">Aavishkaar</string>
     <string name="nav_live_events">Live Events</string>
