@@ -10,7 +10,7 @@
                 android:endColor="#F0F5F1"
                 android:angle="135"/>
 
-            <corners android:radius="25dp"/>
+            <corners android:radius="45dp"/>
             <!--<solid android:color="@color/colorPrimaryDark" />-->
         </shape>
     </item>
