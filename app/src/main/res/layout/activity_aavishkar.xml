@@ -8,8 +8,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradientbackground">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,14 +16,13 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src=""/>
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="@string/aavishkar_title"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:background="@color/transparent"/>
 
         </LinearLayout>
@@ -37,7 +35,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/gradientbackground"
+                android:background="@drawable/aavishkar_bg"
                 android:text="@string/aavishkar_desc"/>
 
         </ScrollView>

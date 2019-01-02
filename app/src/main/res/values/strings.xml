@@ -55,6 +55,6 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name="title_activity_signup">SignupActivity</string>
     <string name="login">LOGIN</string>
-    <string name="aavishkar_title">Aavishkar</string>
+    <string name="aavishkar_title">Aavishkar 2.0</string>
 </resources>
 
