@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#007399</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#faf7f8</color>
@@ -8,6 +8,10 @@
     <!-- background color shade for the application-->
     <color name="startBlue">#09c6df</color>
     <color name="endblue">#0bcce6</color>
+
+    <!--Aavishkar background colors -->
+    <color name="startAavishkar">#007399</color>
+    <color name="endAavishkar">#00ace6</color>
 
 
     <color name="gradientStartSplash">#faf7f8</color>

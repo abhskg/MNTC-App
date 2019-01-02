@@ -3,8 +3,14 @@
     <string name="title_activity_login">Sign in</string>
     <string name="about_mntc">Mathematics,an abstract science of numbers, quantity and space, has held its place as prerequisite to flourish in today world. At Maths N Tech Club, we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle student interest in maths and the thirst of knowledge.</string>
 
+
+    <string name="aavishkar_desc">Description of aavishkar </string>
     <!--Strings for our team page -->
     <string name="our_team">OUR TEAM</string>
+    <string name="mntc_member_name">Name : </string>
+    <string name="mntc_member_designation">Designation : </string>
+    <string name="mntc_member_contact">Contact : </string>
+
 
     <!-- Strings required for Navigation Bar -->
     <string name="nav_aavishkaar">Aavishkaar</string>
@@ -49,5 +55,6 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name="title_activity_signup">SignupActivity</string>
     <string name="login">LOGIN</string>
+    <string name="aavishkar_title">Aavishkar</string>
 </resources>
 
