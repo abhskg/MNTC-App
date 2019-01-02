@@ -48,7 +48,7 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:focusableInTouchMode="true"
                 android:hint="@string/hint_password"
                 android:imeOptions="actionUnspecified"
@@ -59,17 +59,16 @@
                 android:background="@drawable/textview_bg"/>
 
         </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/sign_up_button"
-            style="?android:textAppearanceSmall"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorAccent"
-            android:text="@string/action_sign_in_short"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/sign_up_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/our_team_card"
+                android:text="@string/action_sign_in_short"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
 
         <com.google.android.gms.common.SignInButton
             android:layout_width="wrap_content"
