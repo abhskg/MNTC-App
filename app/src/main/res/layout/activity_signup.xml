@@ -20,7 +20,7 @@
             android:layout_width="@dimen/logo_w_h"
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="50dp"
             android:src="@mipmap/ic_launcher" />
 
         <android.support.design.widget.TextInputLayout
@@ -70,12 +70,14 @@
                 android:textColor="@android:color/black"
                 android:textStyle="bold"/>
 
-        <com.google.android.gms.common.SignInButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip">
+        <!--Google Sign in Button -->
 
-        </com.google.android.gms.common.SignInButton>
+        <!--<com.google.android.gms.common.SignInButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dip">-->
+
+        <!--</com.google.android.gms.common.SignInButton>-->
 
         <Button
             android:id="@+id/btn_reset_password"

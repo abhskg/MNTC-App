@@ -6,7 +6,7 @@
 
     <string name="aavishkar_desc">Description of aavishkar </string>
     <!--Strings for our team page -->
-    <string name="our_team">OUR TEAM</string>
+    <string name="our_team">Our Team</string>
     <string name="mntc_member_name">Name : </string>
     <string name="mntc_member_designation">Designation : </string>
     <string name="mntc_member_contact">Contact : </string>
@@ -56,5 +56,6 @@
     <string name="title_activity_signup">SignupActivity</string>
     <string name="login">LOGIN</string>
     <string name="aavishkar_title">Aavishkar 2.0</string>
+    <string name="text_mntc_logo">Logo of Maths N Tech Club</string>
 </resources>
 

@@ -5,7 +5,9 @@
         <bitmap
             android:alpha="0.2"
             android:src="@drawable/aavishkar_logo"
-            android:gravity="fill_vertical">
+            android:gravity="fill_vertical"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true">
 
         </bitmap>
     </item>
