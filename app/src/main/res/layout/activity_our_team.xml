@@ -21,11 +21,11 @@
                 android:id="@+id/text_ourteam"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="@string/our_team"
                 android:gravity="center"
+                android:text="@string/our_team"
                 android:textColor="@color/white"
                 android:textSize="40sp"
-                app:fontFamily="@font/graduate" />
+                app:fontFamily="@font/impact" />
 
             <ScrollView
                 android:layout_marginTop="50dp"
@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/ourteam_card"
+                    android:background="@drawable/card_bg"
                     app:cardCornerRadius="3dp">
 
                     <android.support.v7.widget.CardView

@@ -6,7 +6,7 @@
 
     <string name="aavishkar_desc">Description of aavishkar </string>
     <!--Strings for our team page -->
-    <string name="our_team">Our Team</string>
+    <string name="our_team">OUR TEAM</string>
     <string name="mntc_member_name">Name : </string>
     <string name="mntc_member_designation">Designation : </string>
     <string name="mntc_member_contact">Contact : </string>
